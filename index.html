@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFO Telerehab Dashboard</title>
+    <style>
+        :root {
+            --primary: #1e56a0;
+            --success: #2ecc71;
+            --warning: #f1c40f;
+            --background: #f4f6f9;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 400px;
+            background: var(--card-bg);
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 24px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--background);
+            padding-bottom: 12px;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0 0 4px 0;
+            color: var(--primary);
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: #777;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+        }
+
+        .card:active {
+            transform: scale(0.95);
+        }
+
+        .card-checkin { background-color: #e8f8f5; border: 2px solid var(--success); }
+        .card-exercises { background-color: #ebf5fb; border: 2px solid var(--primary); }
+        .card-message { background-color: #fef9e7; border: 2px solid var(--warning); }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .btn-live {
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(30, 86, 160, 0.3);
+        }
+
+        .btn-live:active {
+            background-color: #153e75;
+        }
+
+        .progress-box {
+            background: var(--background);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .progress-box p {
+            margin: 0 0 8px 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .progress-bar-bg {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 12px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: var(--success);
+            height: 100%;
+            width: 80%; /* Match the 80% from our visual design */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        <div class="header">
+            <h1>My Daily AFO Plan</h1>
+            <p>Week 1: Foundation</p>
+        </div>
+
+        <a href="YOUR_LIVE_VIDEO_LINK_HERE" class="btn-live">
+            🎥 JOIN LIVE SESSION
+        </a>
+
+        <div class="grid-menu">
+            <a href="YOUR_GOOGLE_FORM_LINK_HERE" class="card card-checkin">
+                <span class="card-icon">📋</span>
+                Daily Check-In
+            </a>
+            <a href="https://youtu.be/il-NT1wrXj0?si=gp34lmVsAMw1vF70" class="card card-exercises">
+                <span class="card-icon">▶️</span>
+                My Exercises
+            </a>
+        </div>
+
+        <div class="grid-menu" style="grid-template-columns: 1fr;">
+            <a href="mailto:fika@poltekkesjakarta1.ac.id" class="card card-message">
+                <span class="card-icon">💬</span>
+                Message My Coach
+            </a>
+        </div>
+
+        <div class="progress-box">
+            <p>Today's Goal: 80% Complete</p>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
